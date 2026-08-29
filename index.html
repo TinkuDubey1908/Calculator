@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <!-- Header -->
+            <div class="header">
+                <h1>Calculator</h1>
+                <div class="mode-toggle">
+                    <button id="basicMode" class="mode-btn active">Basic</button>
+                    <button id="scientificMode" class="mode-btn">Scientific</button>
+                </div>
+            </div>
+
+            <!-- Main Calculator -->
+            <div class="calculator-main">
+                <!-- Display Section -->
+                <div class="display-section">
+                    <input type="text" id="display" class="display" value="0" readonly>
+                    <div id="historyDisplay" class="history-display"></div>
+                </div>
+
+                <!-- Calculator Buttons -->
+                <div class="buttons-section">
+                    <!-- Row 1: Memory and Basic Operations -->
+                    <div class="button-row">
+                        <button id="mc" class="function-btn">MC</button>
+                        <button id="mr" class="function-btn">MR</button>
+                        <button id="mplus" class="function-btn">M+</button>
+                        <button id="mminus" class="function-btn">M−</button>
+                        <button id="clear" class="function-btn clear-btn">AC</button>
+                        <button id="delete" class="function-btn">DEL</button>
+                        <button id="percent" class="function-btn">%</button>
+                        <button id="divide" class="operator-btn">÷</button>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="button-row">
+                        <button class="number-btn">7</button>
+                        <button class="number-btn">8</button>
+                        <button class="number-btn">9</button>
+                        <button id="multiply" class="operator-btn">×</button>
+                        <button id="sqrt" class="sci-btn function-btn" style="display: none;">√</button>
+                        <button id="power" class="sci-btn function-btn" style="display: none;">x²</button>
+                        <button id="reciprocal" class="sci-btn function-btn" style="display: none;">1/x</button>
+                        <button id="factorial" class="sci-btn function-btn" style="display: none;">n!</button>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="button-row">
+                        <button class="number-btn">4</button>
+                        <button class="number-btn">5</button>
+                        <button class="number-btn">6</button>
+                        <button id="subtract" class="operator-btn">−</button>
+                        <button id="sin" class="sci-btn function-btn" style="display: none;">sin</button>
+                        <button id="cos" class="sci-btn function-btn" style="display: none;">cos</button>
+                        <button id="tan" class="sci-btn function-btn" style="display: none;">tan</button>
+                        <button id="pi" class="sci-btn function-btn" style="display: none;">π</button>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="button-row">
+                        <button class="number-btn">1</button>
+                        <button class="number-btn">2</button>
+                        <button class="number-btn">3</button>
+                        <button id="add" class="operator-btn">+</button>
+                        <button id="log" class="sci-btn function-btn" style="display: none;">log</button>
+                        <button id="ln" class="sci-btn function-btn" style="display: none;">ln</button>
+                        <button id="exp" class="sci-btn function-btn" style="display: none;">e^x</button>
+                        <button id="negate" class="sci-btn function-btn" style="display: none;">+/−</button>
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div class="button-row">
+                        <button class="number-btn" style="grid-column: span 2;">0</button>
+                        <button id="decimal" class="number-btn">.</button>
+                        <button id="equals" class="operator-btn equals-btn" style="grid-column: span 2;">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Panel -->
+            <div class="history-panel">
+                <div class="history-header">
+                    <h2>History</h2>
+                    <button id="clearHistory" class="clear-history-btn">Clear</button>
+                </div>
+                <ul id="historyList" class="history-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
